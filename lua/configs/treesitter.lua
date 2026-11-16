@@ -1,0 +1,20 @@
+return {
+  ensure_installed = {
+    "c",
+    "cpp",
+    "c_sharp",
+    "python",
+    "html",
+    "htmldjango",
+    "css",
+    "javascript",
+    "typescript",
+    "json",
+    "yaml",
+    "toml",
+    "bash",
+    "lua",
+    "vim",
+    "vimdoc",
+  },
+}
