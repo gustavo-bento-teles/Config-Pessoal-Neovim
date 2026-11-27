@@ -21,13 +21,14 @@ O objetivo é manter um ambiente de desenvolvimento simples, modular e funcional
 └── lua
     ├── autocmds.lua
     ├── chadrc.lua
+    ├── commands.lua
     ├── configs
-    │   ├── conform.lua
-    │   ├── lazy.lua
-    │   ├── lspconfig.lua
-    │   ├── mason.lua
-    │   ├── platformio.lua
-    │   └── treesitter.lua
+    │   ├── conform.lua
+    │   ├── lazy.lua
+    │   ├── lspconfig.lua
+    │   ├── mason.lua
+    │   ├── platformio.lua
+    │   └── treesitter.lua
     ├── mappings.lua
     ├── options.lua
     └── plugins
@@ -41,6 +42,7 @@ O objetivo é manter um ambiente de desenvolvimento simples, modular e funcional
 - `autocmds.lua`: comandos automáticos.
 - `mappings.lua`: atalhos de teclado.
 - `options.lua`: opções gerais do Neovim.
+- `commands.lua`: definição de comandos personalizados (User Commands) para automatizar tarefas no Neovim.
 - `configs/`: configurações de plugins, LSP, formatadores e PlatformIO.
 - `plugins/init.lua`: declaração dos plugins utilizados.
 - `lazy-lock.json`: versões fixadas dos plugins.
@@ -67,6 +69,14 @@ CompileFlags:
     - -fipa-pta
     - -free
 ```
+
+Ou utilize o seguinte comando dentro do próprio Neovim:
+
+```vim
+:PioClangd
+```
+
+O comando cria automaticamente o arquivo `.clangd` na raiz do projeto, com as configurações necessárias para evitar diagnósticos incorretos do clangd.
 
 ## Outras Linguagens
 

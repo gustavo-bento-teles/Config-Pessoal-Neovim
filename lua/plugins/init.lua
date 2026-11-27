@@ -33,6 +33,8 @@ return {
       { "folke/which-key.nvim" },
       { "nvim-treesitter/nvim-treesitter" },
     },
-    config = require("configs.platformio")
+    config = function ()
+      require("configs.platformio")
+    end
   },
 }
